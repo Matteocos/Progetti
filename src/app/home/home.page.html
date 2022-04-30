@@ -1,20 +1,70 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar style="background-color: rgb(160, 160, 173);">
+    <ion-title class="ion-text-center" style="font-weight: bold; font-family: fantasy;font-size: 230%;">
+      Benvenuti nel nuovo convertitore di misure online
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content  class="sfondo" [fullscreen]="true">
+  
+  <ion-grid style="position: relative; top: 20%">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+   
+
+      <ion-row>
+        <p style="text-align: center; font-size: 170%; margin-top: -7%; margin-left: 25%; margin-right: 25%; font-family: fantasy;margin-bottom: 10%;">Questo convertitore ti
+          permette di convertire in tempo reale sia le distanze che il peso.</p>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col id="colonne" style="background-color: rgb(239, 236, 69);">
+          <div style="background-color: rgb(239, 236, 69);">
+            <h6> Temperatura</h6>
+            <ion-item>
+              <div id="campi">
+                <ion-label position="floating">Celsius</ion-label>
+                <ion-input  type="text" id="celsius" name="celsius" (keyup)="gradiC($event.target.value)" value="{{f}}"></ion-input>
+              </div>
+
+            </ion-item>
+
+            <ion-item>
+              <div>
+                <ion-label position="floating">Fahrenheit</ion-label>
+                <ion-input type="text" id="fah" name="fah" (keyup)="gradiF($event.target.value)" value="{{c}}">
+                </ion-input>
+
+              </div>
+            </ion-item>
+          </div>
+        </ion-col>
+
+        <ion-col id="colonne" style="background-color: rgb(239, 236, 69);">
+          <div style="background-color:rgb(239, 236, 69);">
+            <h6> Distanza</h6>
+            <ion-item>
+              <div id="form">
+                <ion-label position="floating">Chilometri</ion-label>
+                <ion-input type="text" id="km" name="km" (keyup)="disK($event.target.value)" value="{{m}}">
+                </ion-input>
+              </div>
+            </ion-item>
+            <ion-item>
+              <div>
+                <ion-label position="floating">Miglia</ion-label>
+                <ion-input type="text" id="mi" name="mi" (keyup)="disM($event.target.value)" value="{{km}}">
+                </ion-input>
+              </div>
+            </ion-item>
+
+          </div>
+        </ion-col>
+        <ion-col></ion-col>
+
+      </ion-row>
+    
+  </ion-grid>
+
+
 </ion-content>

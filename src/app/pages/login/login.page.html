@@ -1,0 +1,66 @@
+
+<ion-content>
+
+  <form (submit)="login()" class="center">
+    <ion-grid class="set-grid">
+
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col class="ion-text-center" style="max-width: 40%; padding-left: 0%;">
+          <div>
+            <img src="../../../assets/icon/logo_devskill@2x.png" alt="logo_devskill">
+
+
+            <div style="margin: 20%;">
+              <h6> Benvenuti</h6>
+            </div>
+
+            <div Style="text-align:left ;width: max-content;" class="form">
+
+              <ion-item lines="inset" style="border-bottom: 1em;">
+
+                <ion-label position="floating">username</ion-label>
+                <div class="ion-float-right;">
+                  
+                  <ion-input type="text" id="username" name="username" style="max-width: 80%;" [(ngModel)]="username"></ion-input>
+                  <ion-icon class="ion-float-right" name="mail" style="position: relative;top: -25%;" ></ion-icon>
+
+                </div>
+
+              </ion-item >
+              <ion-label class="ion-padding" position="stacked"
+              style="color:#979797; font-size: small;padding: 8%;" class="iom-text-right">Inserisci l'Username</ion-label>
+
+              <ion-item lines="inset" class="" >
+                <ion-label position="floating">Password</ion-label>
+
+                <div class="ion-float-right;">
+                  <ion-input type="password" id="password" name="password"></ion-input>
+                  <ion-icon class="ion-float-right" name="lock-closed" style="position: relative;top: -25%;" ></ion-icon>
+                </div>
+              </ion-item>
+
+              <div>
+                <ion-label class="ion-padding" position="stacked"
+                  style="color:#979797; font-size :small;padding: 8%;" class=ion-text-right>Inserisci Password</ion-label>
+               
+              </div>
+              <div class="ion-float-right;">
+
+                <ion-button type="submit" color=tertiary style="position: relative ; right: -59%; margin-top: 6%; width: 38%; " (click)="EventClick()">Login</ion-button>
+
+              </div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col></ion-col>
+
+
+
+
+
+
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

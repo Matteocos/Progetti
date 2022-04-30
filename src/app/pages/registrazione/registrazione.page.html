@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registrazione</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="login()" class="center">
+    <ion-grid class="set-grid">
+
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col class="ion-text-center" style="max-width: 40%; padding-left: 0%;">
+          <div>
+            <img src="../../../assets/icon/logo_devskill@2x.png" alt="logo_devskill">
+
+
+            <div style="margin: 20%;">
+              <h6> Benvenuti nella pagina di registrazione.</h6>
+            </div>
+
+            <div Style="text-align:left ;width: max-content;" class="form">
+
+              <ion-item lines="inset" style="border-bottom: 1em;">
+
+                <ion-label position="floating">Nome</ion-label>
+                <div class="ion-float-right;">
+                  
+                  <ion-input type="text" id="nome" name="nome" style="max-width: 80%;"[(ngModel)]="nome" ></ion-input>
+                  
+                </div>
+
+              </ion-item >
+              <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;padding: 8%;" class="iom-text-right">Inserisci il nome</ion-label>
+
+              <ion-item lines="inset" class="" >
+                <ion-label position="floating">Cognome</ion-label>
+
+                <div class="ion-float-right;">
+                  <ion-input type="text" id="cognome" name="cognome"[(ngModel)]="cognome"></ion-input>
+                 
+                </div>
+              </ion-item>
+              <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;padding: 8%;" class="iom-text-right">Inserisci il cognome</ion-label>
+
+              <ion-item lines="inset" style="border-bottom: 1em;">
+
+                <ion-label position="floating">E-mail</ion-label>
+                <div class="ion-float-right;">
+                  
+                  <ion-input type="text" id="email" name="email" style="max-width: 80%;" [(ngModel)]="email"></ion-input>
+                  <ion-icon class="ion-float-right" name="mail" style="position: relative;top: -25%;" ></ion-icon>
+
+                </div>
+
+              </ion-item >
+              <ion-label class="ion-padding" position="stacked"
+              style="color:#979797; font-size: small;padding: 8%;" class="iom-text-right">Inserisci l'E-mail</ion-label>
+
+              <ion-item lines="inset" class="" >
+                <ion-label position="floating">Password</ion-label>
+
+                <div class="ion-float-right;">
+                  <ion-input type="password" id="password" name="password" [(ngModel)]="password"></ion-input>
+                  <ion-icon class="ion-float-right" name="lock-closed" style="position: relative;top: -25%;" ></ion-icon>
+                </div>
+              </ion-item>
+
+              <div>
+                <ion-label class="ion-padding" position="stacked"
+                  style="color:#979797; font-size :small;padding: 8%;" class=ion-text-right>Inserisci Password</ion-label>
+               
+              </div>
+              <div class="ion-float-right;">
+
+                <ion-button type="submit" color=tertiary style="position: relative ; right: -59%; margin-top: 6%; width: 45%; " (click)="EventClick()">Registrati</ion-button>
+
+              </div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col></ion-col>
+
+
+
+
+
+
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>
